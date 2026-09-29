@@ -1,0 +1,122 @@
+Microsoft Windows [Version 10.0.26100.6584]
+(c) Microsoft Corporation. All rights reserved.
+
+D:\MEET>cd D:\MEET\DSA
+
+D:\MEET\DSA>git init
+Initialized empty Git repository in D:/MEET/DSA/.git/
+
+D:\MEET\DSA>git remote add origin https://github.com/MeetBarad/DSA.git
+
+D:\MEET\DSA>git remote -v
+origin  https://github.com/MeetBarad/DSA.git (fetch)
+origin  https://github.com/MeetBarad/DSA.git (push)
+
+D:\MEET\DSA>git add .
+
+D:\MEET\DSA>git status
+On branch master
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+
+D:\MEET\DSA>echo # DSA > README.md
+
+D:\MEET\DSA>git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        README.md
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+D:\MEET\DSA>git add .
+
+D:\MEET\DSA>git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   README.md
+
+
+D:\MEET\DSA>git commit -m "Initial DSA commit"
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'atmiya@TFA4-2-123.(none)')
+
+D:\MEET\DSA> git config --global user.email "you@example.com"
+
+D:\MEET\DSA>  git config --global user.name "Your Name"
+
+D:\MEET\DSA>git config --global user.name "MeetBarad"
+
+D:\MEET\DSA>git config --global user.email "baradmeet95@gmail.com"
+
+D:\MEET\DSA>git config --global user.name
+MeetBarad
+
+D:\MEET\DSA>git config --global user.email
+baradmeet95@gmail.com
+
+D:\MEET\DSA>git commit -m "Initial DSA commit"
+[master (root-commit) a2db7e0] Initial DSA commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.md
+
+D:\MEET\DSA>git commit -m "Initial DSA commit"
+
+D:\MEET\DSA>git branch -M main
+
+D:\MEET\DSA>git push -u origin main
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 226 bytes | 226.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/MeetBarad/DSA.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+
+D:\MEET\DSA>git add .
+
+D:\MEET\DSA>git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   my.txt
+
+
+D:\MEET\DSA>git commit -m "my"
+[main 63ab630] my
+ 1 file changed, 1 insertion(+)
+ create mode 100644 my.txt
+
+D:\MEET\DSA>git push
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 20 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 278 bytes | 278.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/MeetBarad/DSA.git
+   a2db7e0..63ab630  main -> main
+
+D:\MEET\DSA>
