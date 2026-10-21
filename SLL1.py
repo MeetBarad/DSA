@@ -31,6 +31,28 @@ class SLL:
             
         new_node.next=temp.next
         temp.next=new_node
+    
+    def delete_begin(self):
+        self.head=self.head.next
+    
+    def delete_last(self):
+        if self.head.next is None:
+            self.head = None
+            print("Last node deleted")
+            return
+
+        temp = self.head
+        while temp.next.next is not None:
+            temp = temp.next
+
+        temp.next = None
+        print("Last node deleted")
+
+    def delete_specefic(self,pos):
+        temp = self.head
+        for i in range(1, pos - 1):
+            temp = temp.next
+        temp.next = temp.next.next
         
     def display(self):
         temp=self.head
@@ -44,6 +66,9 @@ while True:
     print("2.Display")
     print("3.Insert At Last")
     print("4.Insert At Specefic")
+    print("5.Delete At Begining")
+    print("6.Delete At Last")
+    print("7.Delete At Specefic")
     ch=int(input("Enter Your Choice "))
     if(ch==0):
         print("Invalid Choice")
@@ -60,3 +85,10 @@ while True:
         no1=int(input("Enter The Position"))
         no=int(input("Enter The Value of Specefic Point"))
         ob.insert_specefic(no,no1)
+    elif(ch==5):
+        ob.delete_begin();
+    elif(ch==6):
+        ob.delete_last();
+    elif(ch==7):
+        no1=int(input("Enter The Position"))
+        ob.delete_specefic(no1);
