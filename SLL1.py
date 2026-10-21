@@ -60,8 +60,39 @@ class SLL:
         while temp is not None:
             print(temp.data)
             temp=temp.next
+
+    def count(self):
+        c=0
+        temp=self.head
+
+        while temp is not None:
+            c=c+1
+            temp=temp.next
+        print("Total Node: ",c)
+
+    def search(self,data):
+        temp=self.head
+
+        while temp is not None:
+            if temp.data==data:
+               print("Data Found")
+            else:
+                print("Data Not Found")
+            temp=temp.next
+            
+    def reverse(self):
+        prev=None
+        temp=self.head
+
+        while temp is not None:
+            next_node=temp.next
+            temp.next=prev
+            prev=temp
+            temp=next_node
+        self.head=prev
 ob=SLL()
 while True:
+    print()
     print("1.Insert into Begins")
     print("2.Display")
     print("3.Insert At Last")
@@ -69,6 +100,9 @@ while True:
     print("5.Delete At Begining")
     print("6.Delete At Last")
     print("7.Delete At Specefic")
+    print("8.Count")
+    print("9.Search")
+    print("10.Reverse")
     ch=int(input("Enter Your Choice "))
     if(ch==0):
         print("Invalid Choice")
@@ -92,3 +126,10 @@ while True:
     elif(ch==7):
         no1=int(input("Enter The Position"))
         ob.delete_specefic(no1);
+    elif(ch==8):
+        ob.count();
+    elif(ch==9):
+        no=int(input("Enter The Value of Specefic Point"))
+        ob.search(no);
+    elif(ch==10):
+        ob.reverse();
