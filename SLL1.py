@@ -89,6 +89,7 @@ class SLL:
             temp.next=prev
             prev=temp
             temp=next_node
+
         self.head=prev
 ob=SLL()
 while True:
